@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace NumbersToWords
 {
@@ -37,28 +38,43 @@ namespace NumbersToWords
       {100,"one hundred"},
       {200,"two hundred"},
       {300,"three hundred"},
+      {1000, "thousand"},
     };
     public static string ConvertToString(int input) {
-      //384 into "three hundred eighty four"
-      if(input <= 20)
+      string result = "";
+      if(input >= 100)
       {
-        return Convert._dict[input];
+        int hundredsValue = (input / 100) * 100;
+        result += Convert._dict[hundredsValue];
+        input -= hundredsValue;
+        if (input == 0) 
+        {
+          return result;
+        } 
+        else
+        {
+          result += " ";
+        }
+      }
+      //hardcoded case
+      if((input <= 20) || (input % 10 == 0))
+      {
+        // return Convert._dict[input];
+
+        result += Convert._dict[input];
       } 
       else 
+      //case where it's not hardcoded
       {
-        // separate the "tens" value 20 from the "ones" digit/value into separate variables
-        int tensValue = (input / 10) * 10;
-        int onesValue = input % 10;
         // access the strings from the dict using those variables
         // concat them to result
-        string result = "";
-
+        int tensValue = (input / 10) * 10;
+        int onesValue = input % 10;
         result += Convert._dict[tensValue];
         result += " ";
         result += Convert._dict[onesValue];
-
-        return result;
       }
+      return result;
     }  
 
 
