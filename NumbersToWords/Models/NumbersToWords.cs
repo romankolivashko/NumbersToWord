@@ -35,18 +35,39 @@ namespace NumbersToWords
       {70,"seventy"},
       {80,"eighty"},
       {90,"ninety"},
-      {100,"one hundred"},
-      {200,"two hundred"},
-      {300,"three hundred"},
+      {100,"hundred"},
       {1000, "thousand"},
     };
     public static string ConvertToString(int input) {
       string result = "";
+      //from 1000 - 9999
+      if(input >= 1000)
+      {
+        int thousandDigits = input / 1000;
+        // int hundredsValue = (input / 1000) * 1000;
+        result += Convert._dict[thousandDigits];
+        result += " ";
+        result += Convert._dict[1000];
+        input -= (thousandDigits * 1000);
+        if (input == 0) 
+        {
+          return result;
+        } 
+        else
+        {
+          result += " ";
+        }
+      }
+  
+      //from 100 - 999
       if(input >= 100)
       {
-        int hundredsValue = (input / 100) * 100;
-        result += Convert._dict[hundredsValue];
-        input -= hundredsValue;
+        int hundredsDigit = input / 100;
+        // int hundredsValue = (input / 100) * 100;
+        result += Convert._dict[hundredsDigit];
+        result += " ";
+        result += Convert._dict[100];
+        input -= (hundredsDigit * 100);
         if (input == 0) 
         {
           return result;
@@ -78,9 +99,22 @@ namespace NumbersToWords
     }  
 
 
-    //decide a classname
-    //decide properties - declare
-    //method name
-    //write a test - decide what parameters
+    /*
+   Failed ConvertToString_ReturnString_ExpectedStringOneThousand [61 ms]
+  Error Message:
+   Assert.AreEqual failed. Expected:<one thousand>. Actual:<ten hundred>.
+  Stack Trace:
+     at NumbersToWords.Tests.ClassNameTests.ConvertToString_ReturnString_ExpectedStringOneThousand() in C:\Users\john smith\Desktop\epicodus\C#\NumbersToWords.Solution\NumbersToWords.Tests\ModelTests\NumbersToWordsTests.cs:line 114
+
+  Failed ConvertToString_ReturnString_ExpectedStringOneThousandAndTwenty [1 ms]
+  Error Message:
+   Assert.AreEqual failed. Expected:<one thousand twenty>. Actual:<ten hundred twenty>.
+  Stack Trace:
+     at NumbersToWords.Tests.ClassNameTests.ConvertToString_ReturnString_ExpectedStringOneThousandAndTwenty() in C:\Users\john smith\Desktop\epicodus\C#\NumbersToWords.Solution\NumbersToWords.Tests\ModelTests\NumbersToWordsTests.cs:line 125
+
+
+Failed!  - Failed:     2, Passed:     8, Skipped:     0, Total:    10, Duration: 276 ms - NumbersToWords.Tests.dll (net5.0)
+      
+    */
   }
 }
