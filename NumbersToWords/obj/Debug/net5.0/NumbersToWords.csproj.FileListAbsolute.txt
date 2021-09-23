@@ -1,0 +1,12 @@
+C:\Users\john smith\Desktop\epicodus\C#\NumbersToWords.Solution\NumbersToWords\bin\Debug\net5.0\NumbersToWords.deps.json
+C:\Users\john smith\Desktop\epicodus\C#\NumbersToWords.Solution\NumbersToWords\bin\Debug\net5.0\NumbersToWords.dll
+C:\Users\john smith\Desktop\epicodus\C#\NumbersToWords.Solution\NumbersToWords\bin\Debug\net5.0\ref\NumbersToWords.dll
+C:\Users\john smith\Desktop\epicodus\C#\NumbersToWords.Solution\NumbersToWords\bin\Debug\net5.0\NumbersToWords.pdb
+C:\Users\john smith\Desktop\epicodus\C#\NumbersToWords.Solution\NumbersToWords\obj\Debug\net5.0\NumbersToWords.csproj.AssemblyReference.cache
+C:\Users\john smith\Desktop\epicodus\C#\NumbersToWords.Solution\NumbersToWords\obj\Debug\net5.0\NumbersToWords.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\john smith\Desktop\epicodus\C#\NumbersToWords.Solution\NumbersToWords\obj\Debug\net5.0\NumbersToWords.AssemblyInfoInputs.cache
+C:\Users\john smith\Desktop\epicodus\C#\NumbersToWords.Solution\NumbersToWords\obj\Debug\net5.0\NumbersToWords.AssemblyInfo.cs
+C:\Users\john smith\Desktop\epicodus\C#\NumbersToWords.Solution\NumbersToWords\obj\Debug\net5.0\NumbersToWords.csproj.CoreCompileInputs.cache
+C:\Users\john smith\Desktop\epicodus\C#\NumbersToWords.Solution\NumbersToWords\obj\Debug\net5.0\NumbersToWords.dll
+C:\Users\john smith\Desktop\epicodus\C#\NumbersToWords.Solution\NumbersToWords\obj\Debug\net5.0\ref\NumbersToWords.dll
+C:\Users\john smith\Desktop\epicodus\C#\NumbersToWords.Solution\NumbersToWords\obj\Debug\net5.0\NumbersToWords.pdb

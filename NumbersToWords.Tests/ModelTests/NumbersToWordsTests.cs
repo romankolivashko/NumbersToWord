@@ -7,10 +7,16 @@ namespace NumbersToWords.Tests
   public class ClassNameTests
   {
     [TestMethod]
-    public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
+    public void ConvertToString_ReturnString_ExpectedStringOne()
     {
+      //arrange (put hardcoded stuff in vars)
+      int input = 1;
+      string expected = "one";
+      //act (call the function, assign to var)
+      string result = Convert.ConvertToString(input);
+    
       // any necessary logic to prep for test; instantiating new classes, etc.
-      Assert.AreEqual(EXPECTED RESULT, CODE TO TEST);
+      Assert.AreEqual(expected, result);
     }
   }
 }

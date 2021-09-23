@@ -2,8 +2,17 @@ using System.Collections.Generic;
 
 namespace NumbersToWords
 {
-  public class ClassName
+  public class Convert
   {
-    // properties, constructors, methods, etc. go here
+    public static string ConvertToString(int input) {
+      //384 into "three hundred eighty four"
+      return "one";
+    }  
+
+
+    //decide a classname
+    //decide properties - declare
+    //method name
+    //write a test - decide what parameters
   }
 }
